@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Live Website</title>
+  <meta name="description" content="One-file live website — hero, features, gallery, contact form. Ready to deploy." />
+  <!-- Tailwind CDN for quick styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Minimal local styles */
+    .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(6px); }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-slate-900 to-slate-800 text-slate-100 min-h-screen leading-relaxed">
+  <header class="max-w-6xl mx-auto p-6 flex items-center justify-between">
+    <div class="flex items-center gap-4">
+      <div class="w-10 h-10 bg-white/10 rounded flex items-center justify-center text-xl font-bold">YT</div>
+      <div>
+        <h1 class="text-xl font-semibold">Your Site</h1>
+        <p class="text-sm text-slate-300">Built live — ready to deploy</p>
+      </div>
+    </div>
+    <nav class="hidden md:flex gap-6 text-sm text-slate-300">
+      <a href="#features" class="hover:text-white">Features</a>
+      <a href="#gallery" class="hover:text-white">Gallery</a>
+      <a href="#contact" class="hover:text-white">Contact</a>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6">
+    <!-- Hero -->
+    <section class="grid md:grid-cols-2 gap-8 items-center py-12">
+      <div>
+        <h2 class="text-4xl md:text-5xl font-extrabold">A beautiful, single-file website — live now.</h2>
+        <p class="mt-4 text-slate-300 max-w-xl">Fast, responsive, and easy to deploy. Use this page as a portfolio, product landing, or business front page. Customize text, images, and colors in the code — no build step required.</p>
+        <div class="mt-6 flex gap-3">
+          <a id="demoBtn" href="#contact" class="px-5 py-3 bg-sky-500 rounded shadow hover:opacity-90">Get in touch</a>
+          <button id="downloadBtn" class="px-5 py-3 border rounded border-slate-600">Download</button>
+        </div>
+        <ul class="mt-6 grid grid-cols-2 gap-2 text-sm text-slate-400 max-w-sm">
+          <li>✅ Single-file (index.html)</li>
+          <li>✅ Mobile-friendly</li>
+          <li>✅ Deploy to GitHub Pages / Netlify / Vercel</li>
+          <li>✅ Optional contact form backend</li>
+        </ul>
+      </div>
+      <div class="rounded-xl overflow-hidden glass p-6">
+        <img alt="screenshot" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" class="w-full h-64 object-cover rounded"/>
+        <div class="mt-4 text-slate-300">
+          <strong>Live preview</strong>
+          <p class="text-sm mt-2">Change the text and images in the file and re-deploy — changes go live instantly.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-8">
+      <h3 class="text-2xl font-bold">Features</h3>
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <div class="p-6 glass rounded-lg">
+          <h4 class="font-semibold">Fast & Simple</h4>
+          <p class="text-sm text-slate-300 mt-2">No build tools. One file: edit and deploy.</p>
+        </div>
+        <div class="p-6 glass rounded-lg">
+          <h4 class="font-semibold">Responsive</h4>
+          <p class="text-sm text-slate-300 mt-2">Looks great on mobile, tablet, and desktop.</p>
+        </div>
+        <div class="p-6 glass rounded-lg">
+          <h4 class="font-semibold">Deploy Anywhere</h4>
+          <p class="text-sm text-slate-300 mt-2">Works with GitHub Pages, Netlify, Vercel, or simple static hosting.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-8">
+      <h3 class="text-2xl font-bold">Gallery</h3>
+      <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img class="rounded" src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="img1"/>
+        <img class="rounded" src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="img2"/>
+        <img class="rounded" src="https://images.unsplash.com/photo-1526318472351-c75fcf0700f9?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="img3"/>
+        <img class="rounded" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="img4"/>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-8">
+      <h3 class="text-2xl font-bold">Contact</h3>
+      <p class="text-slate-300 mt-2">Fill this form to contact you. (By default it opens an email — you can hook a backend later.)</p>
+      <form id="contactForm" class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input required name="name" placeholder="Your name" class="p-3 rounded bg-slate-900 border border-slate-700" />
+        <input required name="email" placeholder="Email" class="p-3 rounded bg-slate-900 border border-slate-700" />
+        <textarea required name="message" placeholder="Message" class="p-3 rounded bg-slate-900 border border-slate-700 md:col-span-2" rows="4"></textarea>
+        <div class="md:col-span-2 flex gap-3">
+          <button type="submit" class="px-5 py-3 bg-green-600 rounded">Send</button>
+          <button id="clearBtn" type="button" class="px-5 py-3 border rounded border-slate-600">Clear</button>
+        </div>
+      </form>
+      <div id="status" class="mt-4 text-sm text-slate-300"></div>
+    </section>
+
+    <footer class="mt-12 border-t border-slate-700 pt-6 text-sm text-slate-400">
+      <div class="flex justify-between items-center">
+        <div>© <span id="year"></span> Your Site</div>
+        <div>Made with ♥</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Basic interactivity: form -> mailto fallback + download index.html
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('status');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fd = new FormData(form);
+      const name = fd.get('name');
+      const email = fd.get('email');
+      const message = fd.get('message');
+      const subject = encodeURIComponent('Website contact from ' + name);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+      // fallback to mailto for simple live sites
+      window.location.href = `mailto:you@example.com?subject=${subject}&body=${body}`;
+      status.textContent = 'Opening your email client...';
+    });
+
+    document.getElementById('clearBtn').addEventListener('click', () => {
+      form.reset();
+      status.textContent = '';
+    });
+
+    // Download button — creates a blob of this page's HTML for easy saving
+    document.getElementById('downloadBtn').addEventListener('click', async () => {
+      const html = `<!doctype html>\n` + document.documentElement.outerHTML;
+      const blob = new Blob([html], {type: 'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'index.html';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+  </script>
+</body>
+</html>
